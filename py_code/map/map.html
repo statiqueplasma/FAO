@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-        <script>
-            L_NO_TOUCH = false;
-            L_DISABLE_3D = false;
-        </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
@@ -20,220 +15,51 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_6981013c9bce4d3d9617d7690ff392fb {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-            </style>
-        
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_46811a635e6d43dab34a9344f1c9cd76 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_6981013c9bce4d3d9617d7690ff392fb" ></div>
-        
+    <div class="folium-map" id="map_46811a635e6d43dab34a9344f1c9cd76" ></div>
 </body>
 <script>    
     
-            var map_6981013c9bce4d3d9617d7690ff392fb = L.map(
-                "map_6981013c9bce4d3d9617d7690ff392fb",
-                {
-                    center: [-2.482509, -21.91874],
-                    crs: L.CRS.EPSG3857,
-                    zoom: 4,
-                    zoomControl: true,
-                    preferCanvas: false,
-                }
-            );
+    
+        var bounds = null;
+    
 
-            
+    var map_46811a635e6d43dab34a9344f1c9cd76 = L.map(
+        'map_46811a635e6d43dab34a9344f1c9cd76', {
+        center: [-2.482509, -21.91874],
+        zoom: 4,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
 
-        
-    
-            var tile_layer_b1cda996d433467ca0660bba6a58eec7 = L.tileLayer(
-                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-            var marker_5018bf973f84443c820a6243353224ae = L.marker(
-                [42.3636, -71.0995],
-                {}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-        var popup_2c3c15ae3dac49a8b92e5460eb35bc4b = L.popup({"maxWidth": "100%"});
 
-        
-            var html_829b6f4f93404ccbae3a526fa5906f67 = $(`<div id="html_829b6f4f93404ccbae3a526fa5906f67" style="width: 100.0%; height: 100.0%;"><strong>Location One</strong></div>`)[0];
-            popup_2c3c15ae3dac49a8b92e5460eb35bc4b.setContent(html_829b6f4f93404ccbae3a526fa5906f67);
-        
-
-        marker_5018bf973f84443c820a6243353224ae.bindPopup(popup_2c3c15ae3dac49a8b92e5460eb35bc4b)
-        ;
-
-        
     
-    
-            marker_5018bf973f84443c820a6243353224ae.bindTooltip(
-                `<div>
-                     Click For More Info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_3f5e3372318142aba79ec8a7c5e2b3a0 = L.marker(
-                [42.3336, -71.1095],
-                {}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-            var icon_3aa24ad0564c4db49c242420a00f6361 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_3f5e3372318142aba79ec8a7c5e2b3a0.setIcon(icon_3aa24ad0564c4db49c242420a00f6361);
-        
-    
-        var popup_1a07421c48c64550b54b31e657f4af80 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_4203e64a16a54e2cb9bf9c5ac23777c7 = $(`<div id="html_4203e64a16a54e2cb9bf9c5ac23777c7" style="width: 100.0%; height: 100.0%;"><strong>Location Two</strong></div>`)[0];
-            popup_1a07421c48c64550b54b31e657f4af80.setContent(html_4203e64a16a54e2cb9bf9c5ac23777c7);
-        
-
-        marker_3f5e3372318142aba79ec8a7c5e2b3a0.bindPopup(popup_1a07421c48c64550b54b31e657f4af80)
-        ;
-
-        
-    
-    
-            marker_3f5e3372318142aba79ec8a7c5e2b3a0.bindTooltip(
-                `<div>
-                     Click For More Info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_a68dbab3a02e43b18c29f7fb5a120361 = L.marker(
-                [42.37712, -71.0624],
-                {}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-            var icon_34cc0fe774d14ce682e725b20e683e60 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
-            );
-            marker_a68dbab3a02e43b18c29f7fb5a120361.setIcon(icon_34cc0fe774d14ce682e725b20e683e60);
-        
-    
-        var popup_3d3ae0ee54df434c87a8ac0d6033a0fb = L.popup({"maxWidth": "100%"});
-
-        
-            var html_ea100be2ee174999a1603877768d67ea = $(`<div id="html_ea100be2ee174999a1603877768d67ea" style="width: 100.0%; height: 100.0%;"><strong>Location Three</strong></div>`)[0];
-            popup_3d3ae0ee54df434c87a8ac0d6033a0fb.setContent(html_ea100be2ee174999a1603877768d67ea);
-        
-
-        marker_a68dbab3a02e43b18c29f7fb5a120361.bindPopup(popup_3d3ae0ee54df434c87a8ac0d6033a0fb)
-        ;
-
-        
-    
-    
-            marker_a68dbab3a02e43b18c29f7fb5a120361.bindTooltip(
-                `<div>
-                     Click For More Info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_27a08de04b1d4f92a3473469ad1379e4 = L.marker(
-                [42.37415, -71.12241],
-                {}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-            var icon_39239fff29cc4025a3736e03f3abb258 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
-            );
-            marker_27a08de04b1d4f92a3473469ad1379e4.setIcon(icon_39239fff29cc4025a3736e03f3abb258);
-        
-    
-        var popup_fa8341f9a1094867a49840fcea7e390b = L.popup({"maxWidth": "100%"});
-
-        
-            var html_d83854c86cc34f138e995d296a79ec11 = $(`<div id="html_d83854c86cc34f138e995d296a79ec11" style="width: 100.0%; height: 100.0%;"><strong>Location Four</strong></div>`)[0];
-            popup_fa8341f9a1094867a49840fcea7e390b.setContent(html_d83854c86cc34f138e995d296a79ec11);
-        
-
-        marker_27a08de04b1d4f92a3473469ad1379e4.bindPopup(popup_fa8341f9a1094867a49840fcea7e390b)
-        ;
-
-        
-    
-    
-            marker_27a08de04b1d4f92a3473469ad1379e4.bindTooltip(
-                `<div>
-                     Click For More Info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_ce173ce50df94de0990d23e199da93c2 = L.marker(
-                [42.37514, -71.03245],
-                {}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-        var custom_icon_ed3ca0550170471eabcb4df7245284d1 = L.icon({"iconSize": [25, 25], "iconUrl": "data:image/png;base64,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"});
-        marker_ce173ce50df94de0990d23e199da93c2.setIcon(custom_icon_ed3ca0550170471eabcb4df7245284d1);
-        
-    
-        var popup_95f279ac00264102a22f30ee29d24568 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_494d6c06ac734a3ea852d9339e370f97 = $(`<div id="html_494d6c06ac734a3ea852d9339e370f97" style="width: 100.0%; height: 100.0%;">         <h3>ID: 123</h3><br>         <b>my name is: haitam</b>         <b>,y nickna,e is: Mr HZIKA</b>     </div>`)[0];
-            popup_95f279ac00264102a22f30ee29d24568.setContent(html_494d6c06ac734a3ea852d9339e370f97);
-        
-
-        marker_ce173ce50df94de0990d23e199da93c2.bindPopup(popup_95f279ac00264102a22f30ee29d24568)
-        ;
-
-        
-    
-    
-            marker_ce173ce50df94de0990d23e199da93c2.bindTooltip(
-                `<div>
-                     Click For More Info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_marker_63200e19ba3f4bbd86639f573ae71ad2 = L.circleMarker(
-                [42.46647, -70.94211],
-                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_6981013c9bce4d3d9617d7690ff392fb);
-        
-    
-        var popup_3e2f908a00614072896ae0f4867a72a9 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_d0af9c4209be42f1bf619a13e0504d8e = $(`<div id="html_d0af9c4209be42f1bf619a13e0504d8e" style="width: 100.0%; height: 100.0%;">My Birthplace</div>`)[0];
-            popup_3e2f908a00614072896ae0f4867a72a9.setContent(html_d0af9c4209be42f1bf619a13e0504d8e);
-        
-
-        circle_marker_63200e19ba3f4bbd86639f573ae71ad2.bindPopup(popup_3e2f908a00614072896ae0f4867a72a9)
-        ;
-
-        
-    
+    var tile_layer_5704ddd4311045c49896c67b0c977e75 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null, 
+        "detectRetina": false, 
+        "maxNativeZoom": 18, 
+        "maxZoom": 18, 
+        "minZoom": 0, 
+        "noWrap": false, 
+        "opacity": 1, 
+        "subdomains": "abc", 
+        "tms": false
+}).addTo(map_46811a635e6d43dab34a9344f1c9cd76);
 </script>

@@ -24,7 +24,7 @@ void loop(){
   delay(1000);
   dataread(); 
   delay(1000);
-  Serial1.println(String(ID) + String(LAT) + String(LON) + String(PH) + String(VIS));
+  Serial1.println(String(ID) +  " " + String(LON) + " " + String(LAT) + " " + String(PH) + " " + String(VIS));
   
   
   
